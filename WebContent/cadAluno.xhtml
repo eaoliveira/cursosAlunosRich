@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:jsf="http://xmlns.jcp.org/jsf">
+
+	<ui:composition template="/base.xhtml">		
+		<ui:define name="conteudo">	
+		
+				<form id="form1" jsf:id="form1">
+					<div>
+						<label for="nome">Nome</label>
+		 				<input type="text" size="25" name="nome" jsf:id="nome" value="#{alunoBean.nome}" required="required" aria-required="true"/>
+		 			</div><div>
+						<label for="email">E-Mail</label>
+						<input type="email" size="25" name="email" jsf:id="email" value="#{alunoBean.email}" required="required" aria-required="true"/>
+					</div><div>
+						<label for="curso">Curso</label>
+						<h:selectOneMenu value="#{alunoBean.curso}">
+							<f:selectItems  value="#{alunoBean.cursos}" var="item" itemLabel="#{item.nome}" itemValue="#{item.id}" />
+						</h:selectOneMenu>
+					</div><div>
+						<input type="submit" id="submitL" value="Voltar"
+							onclick="window.location.replace('gestaoAlunos.xhtml');"/>
+						<input type="submit" id="submit" value="Salvar" jsf:action="#{alunoBean.salvar}"/>
+					</div>
+				</form>
+				<div id="dialogo" class="modalDialog" jsf:rendered='#{alunoBean.mensagem != null}'>
+					<div>
+						<a href="" title="Close" class="close" onclick='$("div#dalogo").hide()'>X</a>
+						<h2><h:outputText value="#{alunoBean.titulo}" /></h2>
+						<p><h:outputText value="#{alunoBean.mensagem}" /></p>
+					</div>
+				</div>
+				
+		</ui:define>
+ 	</ui:composition>
+ 	
+</html>

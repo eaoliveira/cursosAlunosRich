@@ -1,0 +1,720 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, section,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-weight: inherit;
+	font-style: inherit;
+	font-size: 100%;
+	font-family: inherit;
+	vertical-align: baseline;
+}
+:focus {
+	outline: 0;
+}
+body {
+	line-height: 1;
+	color: black;
+}
+ol, ul {
+	list-style: none;
+}
+
+pre {
+	white-space: pre;           /* CSS 2.0 */
+	white-space: pre-wrap;      /* CSS 2.1 */
+	white-space: pre-line;      /* CSS 3.0 */
+	white-space: -pre-wrap;     /* Opera 4-6 */
+	white-space: -o-pre-wrap;   /* Opera 7 */
+	white-space: -moz-pre-wrap; /* Mozilla */
+	white-space: -hp-pre-wrap;  /* HP Printers */
+	word-wrap: break-word;      /* IE 5+ */
+	}
+	
+	
+@font-face {
+    font-family: 'BitstreamVeraSansRoman';
+    src: url('../../fonts/Vera.eot');
+    src: url('../../fonts/Vera.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/Vera.woff') format('woff'),
+         url('../../fonts/Vera.ttf') format('truetype'),
+         url('../fonts/Vera.svg#BitstreamVeraSansRoman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('../../fonts/BebasNeue-Regular.eot');
+    src: url('../../fonts/BebasNeue-Regular.woff') format('woff'),
+         url('../../fonts/BebasNeue-Regular.ttf') format('truetype'),
+         url('../../fonts/BebasNeue-Regular.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'BebasNeueBold';
+    src: url('../../fonts/BebasNeue-Bold.eot');
+    src: url('../../fonts/BebasNeue-Bold.woff') format('woff'),
+         url('../../fonts/BebasNeue-Bold.ttf') format('truetype'),
+         url('../../fonts/BebasNeue-Bold.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ColaborateThinRegular';
+    src: url('../../fonts/ColabThi.eot');
+    src: url('../../fonts/ColabThi.eot?#iefix') format('embedded-opentype'),
+         url('../../fonts/ColabThi.woff') format('woff'),
+         url('../../fonts/ColabThi.ttf') format('truetype'),
+         url('../../fonts/ColabThi.svg#ColaborateThinRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body {
+    background: linear-gradient(45deg, #dca 12%, transparent 0, transparent 88%, #dca 0),
+    linear-gradient(135deg, transparent 37%, #a85 0, #a85 63%, transparent 0),
+    linear-gradient(45deg, transparent 37%, #dca 0, #dca 63%, transparent 0) #753;
+    background-size: 25px 25px;
+}
+
+a {
+	color: #666;
+	transition: all 0.7s;
+}
+a:hover {
+	color: #000;
+}
+#wrapper {
+	margin-top: 12px;
+	margin-right: auto;
+	margin-left: auto;
+	width: 92%; 
+	max-width: 1306px;
+	background-color: hsla(0, 0%, 100%, 0.61);
+	border: 1px dotted #ccc;
+	border-radius: 4px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+header a {
+	text-decoration: none;
+	color: #0d0c0c; 
+}
+
+#logo { 
+	display: block; 
+	padding-top: 15px; 
+	color: #0d0c0c; 
+	text-transform: uppercase; 
+	font-family: 'BebasNeueBold'; 
+	font-size: 5em; 
+	text-align:center;
+}
+#logo span { 
+	color: #dfdada; 
+}
+a {
+	color: #666;
+	transition: all 0.7s;
+}
+a:hover {
+	color: #000;
+}
+nav { 
+	display: table; 
+	margin-bottom: 15px; 
+	margin-top: 15px; 
+	padding-right: 1.0416667%; /* 10 ÷ 960 */ 
+	padding-left: 1.0416667%; /* 10 ÷ 960 */ 
+	width: 97.9166667%; /* 940 ÷ 960 */ 
+	background: linear-gradient(top, hsla(0,0%,100%,0.11) 0%,hsla(0,0%,94%,0.11) 10%,hsla(0,0%,84%,0.11) 22%,hsla(0,0%,62%,0.11) 41%,hsla(0,0%,38%,0.11) 61%,hsla(0,0%,22%,0.11) 76%,hsla(0,0%,10%,0.11) 88%,hsla(0,0%,1%,0.11) 100%);
+	border-bottom-color: #bfbfbf; 
+	border-bottom-style: double; border-bottom-width: 4px; 
+	background-image: url(../images/atwiNavBg.png); 
+}
+.-ms- nav {
+	padding-bottom: 15px; 
+	margin-top: 15px; 
+	background-repeat: repeat-x; 
+	background-image: url(../images/atwiNavBg.png); 
+}
+nav ul {
+	display: table-row;
+	width: 100%;
+}
+nav ul li { 
+	text-align: center; 
+	display: table-cell;
+	margin-left: 1.3%;
+	margin-right: 1.3%;
+}
+nav ul li:last-child {
+	text-align: right;
+}
+nav ul li:first-child {
+	text-align: left;
+}
+nav ul li a { 
+	height: 42px;
+	text-decoration: none; 
+	text-transform: uppercase;  
+	color: black; 
+	text-shadow: 0 1px 0 hsla(0, 0%, 100%, 1.0);
+	font: 1.875em/42px 'BebasNeueBold';
+	display: block;	
+}
+nav ul li a:hover {
+	animation: warning 1.5s infinite ease-in;
+}
+
+@keyframes warning {
+	0% {
+		text-shadow: 0px 0px 4px #000000;
+	}
+	50% {
+		text-shadow: 0 0 40px #000000;
+	}
+	100% {
+		text-shadow: 0 0 4px #000000;
+	}
+}
+
+#content h1 { 
+	text-transform: uppercase; 
+	font-family: 'BebasNeueRegular';
+	font-size: 4.375em;  /* 102 ÷ 16 */
+	text-shadow: 0px 1px white,4px 4px 0px #dad7d7 ; 
+	font-weight: 400;
+}
+#content h1 em {
+	display: block; 
+	color: #504e4e; 
+	text-shadow: none;
+	font: .352941176em/1.052631579em 'BitstreamVeraSansRoman';
+	font-weight: 400;
+}
+#content h2 {
+	font-family: 'BebasNeueRegular'; 
+	font-size: 1.975em; 
+	font-weight: 400;
+}
+#content h3 em {
+	color: #7696bd;
+}
+#content h3 {
+	font-family: 'BebasNeueRegular'; 
+	font-size: 1.5em;  
+	color: #717171;
+	font-weight: 400;
+}
+#content p { 
+	font-family: 'ColaborateThinRegular';
+	line-height: 40px; 
+	color: #757474; 
+	font-size: 1.875em; /* 24px ÷ 16 */ 
+}
+#content p em {
+	text-decoration: underline;
+}
+#content a.button {
+	text-decoration: none;
+	font: 2.25em 'BebasNeueRegular';
+	background-color: #b01c20;
+	background: linear-gradient(top, rgb(241,92,96) 0%, rgb(176,28,32) 100%);
+	border-radius: 8px;
+	color: white;
+	padding: 3%;
+	float: left;
+	margin-top: 30px;
+	box-shadow: 5px 5px 5px hsla(0, 0%, 26.6667%, 0.8);
+	text-shadow: 0px 1px black;
+	border: 1px solid #bfbfbf;
+	transition-property: border, color, text-shadow;
+	transition-duration: 2s, 3s, 8s; 
+}
+#content a.button:hover {
+	border: 1px solid black;
+	color: black;
+	text-shadow: 0px 1px white;
+	background: linear-gradient(top, rgb(145,62,56) 0%,rgb(176,28,32) 100%);	
+}
+#content a span {
+	font-size: 1.3em;
+}
+#content p i {
+	font-weight: normal;
+	font-style: normal;
+}
+#content li {
+	margin-top: 10px;
+	font: 1.35em 'BebasNeueRegular';
+}
+#content li:before {
+	content: '\272f';
+	margin-right: 1%;
+}
+#escola {
+	margin: auto;
+	margin-left: 20%;
+	height: auto;
+	width: 60%;
+}
+table {
+	margin: auto;
+	width:80%;
+    font-size: 1.5em;
+}
+table th {
+	text-align: left;
+	font-weight: bold;
+}
+.coluna2 {
+	width: 48%
+}
+.coluna3 {
+	width: 47%;
+}
+.coluna1 {
+	width: 5%;
+}
+#form1 {
+	width: 100%;
+	font-family: 'ColaborateThinRegular';
+	font-weight: 400;
+}
+#form1 hgroup {
+	margin-bottom: 20px;
+}
+#form1 div {
+	width: 100%;
+	margin-bottom: 15px;
+	float: left;
+}
+#form1 span#range {
+	float: left;
+	font-size: 3em;
+	width: 100%;
+	color: red;
+	clear: both;
+	text-align: center;
+}
+
+#form1 legend {
+	font-style: italic;
+	color: #434242;
+	font-size: 0.8em;
+	margin-bottom: 20px;
+	float: left;
+	width: 100%;
+}
+
+fieldset {
+	border: 1px dotted #ccc;
+	padding: 2%;
+	margin-bottom: 20px;
+	background: #ffffff;
+	background: linear-gradient(top, #ffffff 77%,#f2f2f2 100%);
+	border-radius: 4px;
+	box-shadow: 2px 2px 5px hsla(0, 0%, 16.6667%, 0.3);
+}
+#form1 label {
+	width: 40%;
+	font-size: 1.3em;
+	float: left;
+}
+#form1 textarea {
+	height: 60px;
+	font-size: 1em;
+	width: 40%;
+	min-width: 250px; 
+	min-height: 150px;
+}
+#form1 input#submit {
+	font-size: 1em;
+	width: 40%;
+	text-decoration: none;
+	height: 34px;
+	font: 1.25em 'BebasNeueRegular';
+	background-color: #ad8d5b;
+	border-radius: 8px;
+	color: white;
+	float: right;
+	margin-bottom: 10px;
+	background: linear-gradient(top, rgb(241, 186, 121) 0%, rgb(176, 145, 58) 100%);
+	margin-top: 10px;
+	box-shadow: 5px 5px 5px hsla(0, 0%, 26.6667%, 0.8);
+	text-shadow: 0px 1px black;
+	border: 1px solid #bfbfbf;
+}
+#form1 input#submitL {
+	font-size: 1em;
+	width: 40%;
+	text-decoration: none;
+	height: 34px;
+	font: 1.25em 'BebasNeueRegular';
+	background-color: #ad8d5b;
+	border-radius: 8px;
+	color: white;
+	float: left;
+	margin-bottom: 10px;
+	background: linear-gradient(top, rgb(241, 186, 121) 0%, rgb(176, 145, 58) 100%);
+	margin-top: 10px;
+	box-shadow: 5px 5px 5px hsla(0, 0%, 26.6667%, 0.8);
+	text-shadow: 0px 1px black;
+	border: 1px solid #bfbfbf;
+}
+
+.modalDialog {
+	position: fixed;
+	font-family: Arial, Helvetica, sans-serif;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.8);
+	z-index: 99999;
+	opacity:1;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: auto;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+.modalDialog > div {
+	width: 70%;
+	position: relative;
+	margin: 30% auto;
+	padding: 5px 20px 13px 20px;
+	border-radius: 10px;
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #999);
+	background: -webkit-linear-gradient(#fff, #999);
+	background: -o-linear-gradient(#fff, #999);
+}
+.close {
+	background: #606061;
+	color: #FFFFFF;
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	text-align: center;
+	top: -10px;
+	width: 24px;
+	text-decoration: none;
+	font-weight: bold;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	border-radius: 12px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000;
+	box-shadow: 1px 1px 3px #000;
+}
+.close:hover { 
+	background: #00d9ff; 
+}
+
+.polyfill-important .input-range,.polyfill-important .step-controls {
+	float: right;
+}
+input[type="checkbox"] {
+	height: 20px;
+}
+input[type="radio"] {
+	width: 43%;
+	height: 30px;
+	float: right;
+    border: 1px solid #bfbfbf;
+    padding: 0.2em;
+    font-size: 1.875em;
+    line-height: 1.2em;
+}
+
+input:required {
+	border: 1px solid rgba(253, 192, 63, 0.29);	
+}
+
+* {
+	transition: all 0.5s; 
+}
+@media screen and (min-width: 100px) and (max-width: 300px) {
+	nav ul li a { 
+		font: 1.175em/42px 'BebasNeueBold';
+	}
+	nav {
+		display: block;
+		background: none;
+	}
+	nav ul {
+		 display: block;
+	}
+	nav ul li {
+		display: list-item;
+		color: red;
+		text-align: left;
+		margin: 0px;
+		font-size: 1em;
+		line-height: 0.9em;
+	}
+	nav ul li a:hover {
+		margin-left: 5%;
+		background-color: #cccccc;
+		padding-left: 2%;
+	}
+	nav ul li:first-child,nav ul li:last-child {
+		text-align: left;
+	}
+	#logo {
+		font-size: 1.3em;
+	}
+	#wrapper {
+		margin-top: 2px;
+		width: 90%;
+	}
+	#content h2 {
+		font-size: 1.0em;
+	}
+	table {
+		font-size: 0.9em;
+	}
+	#content h3 {
+		font-size: 1.1em;  
+	}
+	#form1 input#submit {
+		font-size: 0.7em;
+	}
+	#form1 input#submitL {
+		font-size: 0.7em;
+	}
+	#form1 textarea {
+		max-width: 200px; 
+		max-height: 75%;
+	}
+}
+@media screen and (min-width: 301px) and (max-width: 400px) {
+	nav ul li a { 
+		font: 1.275em/42px 'BebasNeueBold';
+	}
+	nav {
+		display: block;
+		background: none;
+	}
+	nav ul {
+		 display: block;
+	}
+	nav ul li {
+		display: list-item;
+		color: red;
+		text-align: left;
+		margin: 0px;
+		font-size: 1em;
+		line-height: 0.9em;
+	}
+	nav ul li a:hover {
+		margin-left: 5%;
+		background-color: #cccccc;
+		padding-left: 2%;
+	}
+	nav ul li:first-child,nav ul li:last-child {
+		text-align: left;
+	}
+	#logo {
+		font-size: 1.5em;
+	}
+	#wrapper {
+		margin-top: 2px;
+		width: 90%;
+	}
+	#content h2 {
+		font-size: 1.1em;
+	}
+	table {
+		font-size: 1em;
+	}
+	#content h3 {
+		font-size: 1.2em;  
+	}
+	#form1 input#submit {
+		font-size: 0.8em;
+	}
+	#form1 input#submitL {
+		font-size: 0.8em;
+	}
+	#form1 textarea {
+		max-width: 250px; 
+		max-height: 75%;
+	}
+}
+@media screen and (min-width: 401px) and (max-width: 600px) {
+	nav ul li a { 
+		font: 1.375em/42px 'BebasNeueBold';
+	}
+	nav {
+		display: block;
+		background: none;
+	}
+	nav ul {
+		 display: block;
+	}
+	nav ul li {
+		display: list-item;
+		color: red;
+		text-align: left;
+		margin: 0px;
+		font-size: 1em;
+		line-height: 0.9em;
+	}
+	nav ul li a:hover {
+		margin-left: 5%;
+		background-color: #cccccc;
+		padding-left: 2%;
+	}
+	nav ul li:first-child,nav ul li:last-child {
+		text-align: left;
+	}
+	#logo {
+		font-size: 1.8em;
+	}
+	#wrapper {
+		margin-top: 5px;
+		margin-left: 5px;
+		width: 95%;
+		padding-left: 8px;
+		padding-right: 10px;
+	}
+	input[type="radio"] {
+		width: 40%;
+		height: 20px;
+		font-size: 1.1em;
+	}
+	#content h1 {
+		font-size: 3em;
+		text-shadow: 0 1px white, 2px 2px 0 #DAD7D7;
+	}
+	#content h2 {
+		font-size: 1.2em;
+	}
+	#content h3 {
+		font-size: 1.1em;  
+	}
+  	#content li {
+		margin-top: 3px;
+		font: 1.25em 'BebasNeueRegular';
+	}
+	#content a.button {
+		font-size: 1.2em;
+		width: 94%;
+		margin-top: 2%;
+		text-align: center;
+	}
+	#content p {
+		font-size: 1.1em;
+		line-height: 1.3em;
+	}
+	table {
+		font-size: 1.2em;
+	}
+	#form1 input#submit {
+		font-size: 1em;
+	}
+	#form1 input#submitL {
+		font-size: 1em;
+	}
+	#form1 textarea {
+		max-width: 350px; 
+		max-height: 350px
+	}	
+}
+@media screen and (min-width: 475px) and (max-width: 600px) {
+	nav ul li a { 
+		font: 1.375em/42px 'BebasNeueBold';
+	}	
+	#logo {
+		font-size: 2em;
+	}
+	#content h1 em {
+		font-size: 0.4em;
+		
+	}
+	#content h2 {
+		font-size: 1.5em;
+	}
+	#content h3 {
+		font-size: 1.2em;  
+	}
+	input[type="radio"] {
+		width: 40%;
+		height: 20px;
+		font-size: 1.3em;
+	}
+	#content p {
+		font-size: 1.25em;
+		line-height: 1.3em;
+	}
+	#content a.button {
+		font-size: 1.8em;
+		width: 94%;
+		margin-top: 2%;
+		text-align: center;
+	}
+	table {
+		font-size: 1.3em;
+	}
+	#form1 textarea {
+		max-width: 400px; 
+		max-height: 350px
+	}	
+}
+@media screen and (min-width:601px) and (max-width: 900px) {
+	nav ul li a { 
+		font: 1.575em/42px 'BebasNeueBold';
+	}
+	#content h3 {
+		font-size: 1.4em;  
+	}
+	#form1 textarea {
+		max-width: 500px; 
+		max-height: 550px
+	}
+	table {
+    	font-size: 1.5em;
+	}	
+}
+@media screen and (max-width: 768px) {
+	#body {width: 96%; margin: 2%; padding: 0px; margin-bottom: 0px;
+	}
+}
+@media screen and (min-width: 901px) {
+	#content h1 {
+		font-size: 6em;
+	}
+	input[type="radio"] {
+		width: 43%;
+		height: 38px;
+		font-size: 2.3em;
+	}
+	#content p {
+		font-size: 2.3em;
+		line-height: 1.2em;
+		margin-top: 1%;
+	}
+	#form1 textarea {
+		max-width: 750px; 
+		max-height: 700px
+	}
+	table {
+    	font-size: 1.5em;
+	}
+	
+}

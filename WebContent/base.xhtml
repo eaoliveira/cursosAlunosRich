@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+    xmlns:jsf="http://xmlns.jcp.org/jsf"
+    xmlns:a4j="http://richfaces.org/a4j"
+    xmlns:rich="http://richfaces.org/rich">
+<h:head>
+<meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<title>Escola</title>
+</h:head>
+<h:body>
+	<h:outputStylesheet name="styles/style.css"/>
+	<h:outputStylesheet name="styles/jquery-ui.css" />
+	<h:outputScript name="scripts/jquery-1.7.1.js" />
+
+	<div id="wrapper">
+		<header role="banner" class="group">
+			<div id="logo">Escola 1/2 Boca</div>
+			<h:form>
+				<rich:toolbar style="width: 100%">
+					<rich:dropDownMenu label="Gestão de Cursos">
+						<rich:menuItem label="Cadastro de Cursos" action="cadCurso.xhtml"/>
+						<rich:menuItem label="Lista dos Cursos Cadastrados" action="listaCursos.xhtml"/>
+					</rich:dropDownMenu>
+					<rich:dropDownMenu label="Gestão de Alunos">
+						<rich:menuItem label="Cadastro de Alunos" action="cadAluno.xhtml"/>
+						<rich:menuItem label="Lista dos Alunos Cadastrados" action="listaAlunos.xhtml"/>
+					</rich:dropDownMenu>
+				</rich:toolbar>
+			</h:form>
+		</header>
+
+		<div id="content" role="main">
+			<fieldset>
+				<ui:insert name="conteudo" />
+			</fieldset>
+		</div>
+
+	</div>
+</h:body>
+</html>
